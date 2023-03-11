@@ -1,0 +1,91 @@
+@import "../../variables.scss";
+
+.navigation{
+  // background-color: blue;
+
+  grid-template-columns: 1fr 0.15fr;
+  grid-gap: 0.5rem;
+  align-items: center;
+  padding: 0 .5rem;
+
+  border-radius:20px;
+  backdrop-filter: blur(10px);
+  .nav{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__link{
+      margin: 0 10px;
+      a{
+        text-decoration: none;
+        transition: opacity 0.25s;
+        opacity:0.3;
+      }
+      .active{
+        opacity:1;
+      }
+      &:hover{
+        a{
+          opacity:1;
+        }
+      }
+
+    }
+  }
+  &__burger-menu{
+    button{
+      background:none;
+      opacity:0.3;
+    }
+  }
+}
+@media screen and (max-width:768px){
+  .navigation{
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
+    margin-right: 1.5rem;
+
+    .nav{
+      display: none;
+
+      position:absolute;
+      top: 40px;
+      right: 0;
+
+      border-radius:10px;
+
+      flex-direction: column;
+
+      background-color: $bg-form;
+
+      box-shadow: 0 0 10px rgb(0 0 0 / 10%);
+
+      &__link{
+        margin: 0.5rem;
+        padding: 15px 10px;
+        text-align: center;
+      }
+    }
+    .show {
+      display: block;
+    }
+    &__burger-menu{
+      display:flex;
+      justify-content: center;
+      align-items: center;
+
+      padding-top: 2.5px;
+
+      svg{
+        width: 30px;
+        height: 30px;
+      }
+    }
+  }
+}
+@media screen and (min-width: 768px) {
+  .burger-menu {
+    display: none;
+  }
+}

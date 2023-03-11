@@ -1,0 +1,28 @@
+@import '../../variables.scss';
+.error{
+    text-align:center;
+    font-family: Roboto;
+    h1{
+        font-size: $font-size-error;
+        font-weight: $font-weight-dark;
+        line-height: 75px;
+        
+    }
+    .nf{
+        font-size: $font-size-subtitle;
+        font-weight: $font-weight-medium;
+    }
+    .return{
+        font-size: $font-size-extra-subtitle;
+        font-weight: $font-weight-light;
+        margin-top: 20px;
+        line-height: 10px;
+        a{
+            transition: opacity 0.3s;
+            color: $font-color;
+            &:hover{
+                opacity: .5;
+            }
+        }
+    }
+}

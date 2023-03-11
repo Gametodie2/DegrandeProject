@@ -1,0 +1,74 @@
+/* =============== IMPORTS ===============*/
+
+@import 'variables.scss';
+
+/* =============== GENERAL LAYOUT ===============*/
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color:$bg-color ; 
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+input {
+  font-family: $font-main;
+}
+
+h1 {
+  font-weight: $font-weight-dark;
+  font-size: $font-size-title;
+  color: $font-color;
+}
+ul {
+  list-style: none;
+}
+
+a {
+  color: $font-color;
+}
+
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+/*==================== LAYOUT ====================*/
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+.container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+/*==================== ERROR ====================*/
+.form{
+  &__error-container{
+    display: flex;
+    align-items: center;
+    img{
+      width: 20px;
+      height: 20px;
+    }
+  }
+  &__error{
+    margin:0 5px !important;
+  }
+}

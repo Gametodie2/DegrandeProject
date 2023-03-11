@@ -1,0 +1,185 @@
+@import "../../../variables.scss";
+.profile {
+  width: 35px;
+  height: 35px;
+  &__picture {
+    cursor: pointer;
+    img {
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+    }
+  }
+  &__dropdown {
+    display: none;
+    font-size: $font-size-dropdown;
+    line-height: 22px;
+    color: $font-color-dropdown;
+    border: none;
+    background-color: $bg-form;
+    box-shadow: 0 10px 30px 0 rgba(31, 45, 61, 0.1);
+    border-radius: 0.5rem;
+    position: absolute;
+    top: 40px;
+    right: 0;
+    &::after {
+      content: "";
+      position: absolute;
+      top: -10px;
+      right: 10px;
+      width: 0;
+      height: 0;
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      border-bottom: 10px solid $bg-form;
+    }
+    &__account {
+      display: flex;
+      align-items: center;
+      padding: 0.5rem 1rem;
+      border-radius: 0.5rem 0.5rem 0 0;
+      transition: background-color 0.2s ease-in-out;
+      border-bottom: 1px solid #b4b4b4;
+      cursor: pointer;
+      &:hover {
+        background-color: $bg-auth-btn-hover;
+      }
+      &__image {
+        margin-right: 1rem;
+        img {
+          width: 35px;
+          height: 35px;
+          border-radius: 50%;
+        }
+      }
+      &__info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &__name {
+          font-size: 1rem;
+          font-weight: 600;
+        }
+        &__email {
+          font-size: 0.875rem;
+          color: #999;
+        }
+      }
+    }
+    &__divider {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      transition: background-color 0.2s ease-in-out;
+      border-radius: 0 0 0.5rem 0.5rem;
+      cursor: pointer;
+      &__copy-id {
+        &__copy-text {
+          padding: 0.25rem;
+          background: transparent;
+          display: flex;
+          align-items: center;
+          input {
+            background: transparent;
+            padding: 10px;
+            font-size: 1rem;
+            border: none;
+            outline: none;
+            color: #555;
+          }
+          button {
+            display: flex;
+            align-items: center;
+            padding: 0.25rem;
+            background: $bg-copy-btn;
+            border-radius: 0.5rem;
+            color: $font-color-copy-button;
+            width: 25px;
+            height: 25px;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            &:active {
+              background: $bg-copy-btn-hover;
+            }
+            &:before {
+              content: "Copied";
+              position: absolute;
+              top: 30px;
+              right: 0;
+              background: $bg-copy-btn;
+              padding: 8px 10px;
+              border-radius: 20px;
+              font-size: 15px;
+              display: none;
+              z-index: 20;
+            }
+          }
+        }
+      }
+      &__logout {
+        height: 80%;
+        width: 100%;
+      }
+      &:hover {
+        background-color: $bg-auth-btn-hover;
+      }
+    }
+  }
+  &:hover {
+    .profile__dropdown {
+      display: block;
+    }
+  }
+}
+.active {
+  button {
+    &:before {
+      display: block;
+    }
+  }
+}
+
+.login {
+  cursor: pointer;
+  &__image {
+    width: 35px;
+    height: 35px;
+    svg {
+      width: 35px;
+      height: 35px;
+      opacity: 0.2;
+    }
+  }
+  &__dropdown {
+    display: none;
+    position: absolute;
+    top: 35px;
+    right: 0;
+    &__loginButton {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: $font-main;
+      font-size: 1rem;
+      color: $font-color;
+      text-transform: uppercase;
+      background-color: $bg-form;
+      border-radius: 10px;
+      font-weight: 600;
+      width: 100%;
+      cursor: pointer;
+      svg {
+        width: 25px;
+        height: 25px;
+        margin-right: 10px;
+      }
+    }
+  }
+  &:hover {
+    .login__dropdown {
+      display: block;
+    }
+  }
+}

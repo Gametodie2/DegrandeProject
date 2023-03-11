@@ -1,0 +1,29 @@
+@import '../../variables.scss';
+.socials{
+    display:inline-block;
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    svg{
+        width:35px;
+        height:35px;
+        padding: 5px;
+        margin:0 5px;
+        cursor:pointer;
+        transition:opacity 0.3s ease-in-out;
+        &:hover{
+            opacity:0.5;
+        }
+    }
+}
+@media screen and (max-width: 768px) {
+    .socials{
+        display: grid !important;
+        svg{
+            width:40px;
+            height:40px;
+            padding: 10px;
+        }
+        margin-left: 15px;
+        margin-bottom:15px;
+    }
+}

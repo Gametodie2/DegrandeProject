@@ -1,0 +1,53 @@
+/* =============== IMPORTS ===============*/
+
+@import 'animate.css';
+@import 'variables.scss';
+
+/* =============== LAYOUT ===============*/
+div {
+  #root {
+    margin: 0;
+    padding: 0;
+    font-family: $font-main;
+  }
+}
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* ===============Scrollbar===============*/
+/*width*/
+::-webkit-scrollbar {
+  width: 7.5px;
+  height: 7.5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+  background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $scroll-thumb-color;
+  border-radius: 20px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: $scroll-thumb-hover-color;
+}
+
+::-webkit-scrollbar-button:end:increment {
+  height: 65%;
+  width: 65%;
+  display: block;
+  background: transparent;
+}
+
+  

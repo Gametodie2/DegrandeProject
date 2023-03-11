@@ -1,0 +1,38 @@
+.options {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  div {
+    margin-top: 5px;
+    grid-template-rows: 1fr;
+    grid-gap: 0;
+    justify-items: center;
+  }
+  label {
+    font-size: 14px;
+    font-weight: 300;
+    color: #999999;
+    line-height: 14px;
+    margin-bottom: 10px;
+  }
+
+  input[type="radio"] {
+    border: 2px solid #999999;
+    padding: 0.5em;
+    appearance: none;
+    border-radius: 5px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+
+    &:checked {
+      background-color: #727272;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+}

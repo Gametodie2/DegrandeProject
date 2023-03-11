@@ -1,0 +1,48 @@
+@import "../../../variables.scss";
+.authlanding {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  height: 100vh;
+  width: 100vw;
+
+  font-family: $font-main;
+  text-align: center;
+  .return__home{
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+
+    background: none;
+    a{
+      color: $font-color;
+      font-size: $font-size-button;
+      text-decoration: none;
+
+      opacity:0.5;
+
+      transition: opacity 0.3s;
+
+      display: flex;
+      align-items: center;
+      svg{
+        margin-right: 0.25rem;
+        width: 30px;
+        height: 30px;
+      }
+      &:hover{
+        opacity:1;
+      }
+    }
+  }
+  &__title {
+    font-size: $font-size-title;
+    margin-bottom: 1rem;
+  }
+  &__subtitle {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+}

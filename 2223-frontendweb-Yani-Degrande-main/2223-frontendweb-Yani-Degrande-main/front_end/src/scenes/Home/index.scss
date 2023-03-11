@@ -1,0 +1,109 @@
+/* =============== IMPORTS ===============*/
+
+@import "../../variables.scss";
+
+/* =============== LAYOUT ===============*/
+
+.home {
+  height: 100%;
+  width: 100%;
+  &__data {
+    button {
+      background: none;
+      width: fit-content;
+      height: fit-content;
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 50%;
+        display: block;
+        width: 30px;
+        height: 1px;
+        background-color: $line-color;
+        transition: all 0.3s ease-in-out;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 50%;
+        display: block;
+        width: 30px;
+        height: 1px;
+        background-color: $line-color;
+        transition: all 0.3s ease-in-out;
+      }
+      a {
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+/* =============== RESPONSIVE ===============*/
+
+/* - Mobile */
+@media screen and (max-width: 768px) {
+  .home {
+    grid-template-rows: 1fr 1fr;
+    &__data {
+      grid-template-rows: 1fr 2fr 1fr;
+      align-items: center;
+      gap: 0.5rem;
+      button {
+        padding: 0 25px;
+        &::before {
+          width: 20px;
+        }
+        &::after {
+          width: 20px;
+        }
+      }
+    }
+    &__image {
+      height: fit-content;
+      svg {
+        width: 100%;
+        .bambi-img {
+          width: 65%;
+          height: 70%;
+        }
+      }
+    }
+  }
+}
+
+/* - Desktop || Laptop */
+@media screen and (min-width: 768px) {
+  .home {
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-items: end;
+    &__data {
+      margin-left:25px;
+      button {
+        font-size: 1rem;
+        padding: 10px 50px;
+        &::before {
+          width: 30px;
+        }
+        &::after {
+          width: 30px;
+        }
+      }
+    }
+    &__image {
+      width: 100%;
+      height: fit-content;
+      margin-left:50px;
+      svg {
+      .bambi-img {
+          width: 450px;
+          height: 500px;
+        }
+      }
+    }
+  }
+}

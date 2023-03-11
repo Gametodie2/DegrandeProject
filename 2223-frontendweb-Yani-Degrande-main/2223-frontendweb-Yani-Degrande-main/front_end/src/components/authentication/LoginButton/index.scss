@@ -1,0 +1,41 @@
+@import "../../../variables.scss";
+.loginButton {
+    font-family: $font-main;
+    font-size: $font-size-auth-button;
+    font-weight: 600;
+    color: $font-color;
+    text-transform: uppercase;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: $bg-form;
+    border: none;
+    border-radius: 10px;
+
+    padding: 10px;
+    width: 100%;
+
+    cursor: pointer;
+
+    transition: background-color 0.2s ease-in-out;
+    &:hover {
+        background-color: $bg-auth-btn-hover;
+    }
+    svg {
+        width: 25px;
+        height: 25px;
+        margin-right: 10px;
+    }
+}
+@media screen and (max-width: 768px) {
+    .loginButton {
+        font-size: $font-size-auth-button-smaller;
+        padding: 5px;
+        svg {
+            width: 20px;
+            height: 20px;
+        }
+    }
+}
